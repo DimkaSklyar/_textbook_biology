@@ -14,6 +14,7 @@ namespace TextBook_Biology
     {
         AddTextbookForm addTextbook;
         string path = Application.StartupPath;
+        TextBookForm textBookForm;
         public MainForm()
         {
             InitializeComponent();
@@ -81,6 +82,32 @@ namespace TextBook_Biology
                 listTextbook.Items.Add(streamReader.ReadLine());
             }
             streamReader.Close();
+        }
+
+        private void goButton_Click(object sender, EventArgs e)
+        {
+            var item = this.listTextbook.SelectedItem;
+            string nameTextbook="";
+            if (textBookForm == null && item != null)
+            {
+                nameTextbook = item.Text;
+                textBookForm = new TextBookForm(nameTextbook);
+                textBookForm.Text = this.listTextbook.SelectedItem.Text;
+                FileStream reader = new FileStream(path + "\\" + nameTextbook + "\\tree.lst", FileMode.OpenOrCreate);
+                reader.Close();
+                textBookForm.Show();
+            }
+            else if (item != null && textBookForm.IsDisposed)
+            {
+                TextBookForm textBookForm = new TextBookForm(nameTextbook);
+                textBookForm.Text = this.listTextbook.SelectedItem.Text;
+                textBookForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Выберете один учебние из списка!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
         }
     }
 }

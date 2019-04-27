@@ -55,7 +55,7 @@
             // 
             this.addButton.Location = new System.Drawing.Point(356, 12);
             this.addButton.Name = "addButton";
-            this.addButton.Size = new System.Drawing.Size(90, 24);
+            this.addButton.Size = new System.Drawing.Size(126, 24);
             this.addButton.TabIndex = 1;
             this.addButton.Text = "Добавить";
             this.addButton.ThemeName = "VisualStudio2012Light";
@@ -65,7 +65,7 @@
             // 
             this.removeBotton.Location = new System.Drawing.Point(356, 53);
             this.removeBotton.Name = "removeBotton";
-            this.removeBotton.Size = new System.Drawing.Size(90, 24);
+            this.removeBotton.Size = new System.Drawing.Size(126, 24);
             this.removeBotton.TabIndex = 1;
             this.removeBotton.Text = "Удалить";
             this.removeBotton.ThemeName = "VisualStudio2012Light";
@@ -75,25 +75,26 @@
             // 
             this.settingsButton.Location = new System.Drawing.Point(356, 94);
             this.settingsButton.Name = "settingsButton";
-            this.settingsButton.Size = new System.Drawing.Size(90, 24);
+            this.settingsButton.Size = new System.Drawing.Size(126, 24);
             this.settingsButton.TabIndex = 1;
-            this.settingsButton.Text = "Настройки";
+            this.settingsButton.Text = "Администрирование";
             this.settingsButton.ThemeName = "VisualStudio2012Light";
             // 
             // goButton
             // 
             this.goButton.Location = new System.Drawing.Point(356, 283);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(90, 24);
+            this.goButton.Size = new System.Drawing.Size(126, 24);
             this.goButton.TabIndex = 1;
             this.goButton.Text = "Открыть";
             this.goButton.ThemeName = "VisualStudio2012Light";
+            this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 319);
+            this.ClientSize = new System.Drawing.Size(490, 319);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.removeBotton);

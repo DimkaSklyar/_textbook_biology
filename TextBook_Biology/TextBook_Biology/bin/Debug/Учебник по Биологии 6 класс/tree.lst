@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TreeView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ThemeName="VisualStudio2012Light" BackColor="239; 239; 242">
+  <Nodes Name="Глава 1" Text="Глава 1" Font="Microsoft Sans Serif; 8,25pt" />
+  <Nodes Name="Глава 2" Text="Глава 2" Font="Microsoft Sans Serif; 8,25pt" />
+</TreeView>
