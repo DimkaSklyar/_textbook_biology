@@ -20,3 +20,4 @@ D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextB
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AddTextbookForm.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.TextBookForm.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AddParentNode.resources
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.RenameForm.resources

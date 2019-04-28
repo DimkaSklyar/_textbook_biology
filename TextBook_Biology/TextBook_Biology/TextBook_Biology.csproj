@@ -77,6 +77,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RenameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RenameForm.Designer.cs">
+      <DependentUpon>RenameForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TextBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RenameForm.resx">
+      <DependentUpon>RenameForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TextBookForm.resx">
       <DependentUpon>TextBookForm.cs</DependentUpon>
     </EmbeddedResource>

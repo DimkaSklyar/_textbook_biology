@@ -47,6 +47,9 @@
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuItemRename = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
@@ -63,6 +66,7 @@
             this.radContextMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.menuItemAdd,
             this.menuItemSubAdd,
+            this.menuItemRename,
             this.menuItemRemove});
             this.radContextMenu1.ThemeName = "VisualStudio2012Light";
             // 
@@ -92,7 +96,7 @@
             // 
             // 
             this.radSplitContainer1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.radSplitContainer1.Size = new System.Drawing.Size(721, 424);
+            this.radSplitContainer1.Size = new System.Drawing.Size(1072, 584);
             this.radSplitContainer1.SplitterWidth = 3;
             this.radSplitContainer1.TabIndex = 1;
             this.radSplitContainer1.TabStop = false;
@@ -107,7 +111,7 @@
             // 
             // 
             this.splitPanel1.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel1.Size = new System.Drawing.Size(146, 424);
+            this.splitPanel1.Size = new System.Drawing.Size(217, 584);
             this.splitPanel1.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(-0.2966574F, 0F);
             this.splitPanel1.SizeInfo.SplitterCorrection = new System.Drawing.Size(-213, 0);
             this.splitPanel1.TabIndex = 0;
@@ -140,7 +144,7 @@
             radTreeNode1,
             radTreeNode2});
             this.treeView.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.treeView.Size = new System.Drawing.Size(146, 424);
+            this.treeView.Size = new System.Drawing.Size(217, 584);
             this.treeView.TabIndex = 0;
             this.treeView.ThemeName = "VisualStudio2012Light";
             this.treeView.SelectedNodeChanged += new Telerik.WinControls.UI.RadTreeView.RadTreeViewEventHandler(this.treeView_SelectedNodeChanged);
@@ -149,13 +153,13 @@
             // splitPanel2
             // 
             this.splitPanel2.Controls.Add(this.webBrowser1);
-            this.splitPanel2.Location = new System.Drawing.Point(149, 0);
+            this.splitPanel2.Location = new System.Drawing.Point(220, 0);
             this.splitPanel2.Name = "splitPanel2";
             // 
             // 
             // 
             this.splitPanel2.RootElement.MinSize = new System.Drawing.Size(25, 25);
-            this.splitPanel2.Size = new System.Drawing.Size(572, 424);
+            this.splitPanel2.Size = new System.Drawing.Size(852, 584);
             this.splitPanel2.SizeInfo.AutoSizeScale = new System.Drawing.SizeF(0.2966574F, 0F);
             this.splitPanel2.SizeInfo.SplitterCorrection = new System.Drawing.Size(213, 0);
             this.splitPanel2.TabIndex = 1;
@@ -169,7 +173,7 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(572, 424);
+            this.webBrowser1.Size = new System.Drawing.Size(852, 584);
             this.webBrowser1.TabIndex = 0;
             // 
             // radMenu1
@@ -177,10 +181,11 @@
             this.radMenu1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuItem1,
-            this.radMenuItem3});
+            this.radMenuItem3,
+            this.radMenuItem4});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
-            this.radMenu1.Size = new System.Drawing.Size(721, 23);
+            this.radMenu1.Size = new System.Drawing.Size(1072, 23);
             this.radMenu1.TabIndex = 1;
             this.radMenu1.ThemeName = "VisualStudio2012Light";
             // 
@@ -195,30 +200,47 @@
             // 
             this.radMenuItem2.Name = "radMenuItem2";
             this.radMenuItem2.Text = "Выход";
+            this.radMenuItem2.Click += new System.EventHandler(this.radMenuItem2_Click);
             // 
             // radMenuItem3
             // 
             this.radMenuItem3.Name = "radMenuItem3";
-            this.radMenuItem3.Text = "radMenuItem3";
+            this.radMenuItem3.Text = "Вид";
+            // 
+            // menuItemRename
+            // 
+            this.menuItemRename.Name = "menuItemRename";
+            this.menuItemRename.Text = "Переименовать";
+            // 
+            // radMenuItem4
+            // 
+            this.radMenuItem4.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem5});
+            this.radMenuItem4.Name = "radMenuItem4";
+            this.radMenuItem4.Text = "Сервис";
+            // 
+            // radMenuItem5
+            // 
+            this.radMenuItem5.Name = "radMenuItem5";
+            this.radMenuItem5.Text = "О программе";
             // 
             // TextBookForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(721, 447);
+            this.ClientSize = new System.Drawing.Size(1072, 607);
             this.Controls.Add(this.radSplitContainer1);
             this.Controls.Add(this.radMenu1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1080, 640);
             this.Name = "TextBookForm";
             // 
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TextBookForm";
             this.ThemeName = "VisualStudio2012Light";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.TextBookForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
             this.radSplitContainer1.ResumeLayout(false);
@@ -250,5 +272,8 @@
         private Telerik.WinControls.UI.RadMenuItem menuItemSubAdd;
         internal Telerik.WinControls.UI.RadTreeView treeView;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem3;
+        private Telerik.WinControls.UI.RadMenuItem menuItemRename;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
     }
 }

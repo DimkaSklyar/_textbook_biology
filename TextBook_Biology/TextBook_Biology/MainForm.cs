@@ -99,6 +99,7 @@ namespace TextBook_Biology
             }
             else if (item != null && textBookForm.IsDisposed)
             {
+                nameTextbook = item.Text;
                 TextBookForm textBookForm = new TextBookForm(nameTextbook);
                 textBookForm.Text = this.listTextbook.SelectedItem.Text;
                 textBookForm.Show();

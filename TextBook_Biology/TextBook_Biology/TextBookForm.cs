@@ -22,7 +22,18 @@ namespace TextBook_Biology
             menuItemAdd.Click += MenuItemAdd_Click;
             menuItemRemove.Click += MenuItemRemove_Click;
             menuItemSubAdd.Click += MenuItemSubAdd_Click;
+            menuItemRename.Click += MenuItemRename_Click;
             this.nameTextbook = nameTextbook;
+        }
+
+        private void MenuItemRename_Click(object sender, EventArgs e)
+        {
+            var item = treeView.SelectedNode;
+            if (item != null)
+            {
+                RenameForm renameForm = new RenameForm(this,item.Text);
+                renameForm.Show();
+            }
         }
 
         private void MenuItemSubAdd_Click(object sender, EventArgs e)
@@ -65,8 +76,8 @@ namespace TextBook_Biology
         {
             if (e.Button == MouseButtons.Right)
             {
-                Point p = new Point(e.X, e.Y+45);
-                radContextMenu1.Show(p);
+                Point p = new Point(e.X, e.Y);
+                radContextMenu1.Show(treeView, p);
             }
         }
 
@@ -91,6 +102,11 @@ namespace TextBook_Biology
         {
             Uri uri = new Uri(path + "\\" + nameTextbook + "\\" + e.Node.Text + ".html");
             webBrowser1.Url = uri;
+        }
+
+        private void radMenuItem2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

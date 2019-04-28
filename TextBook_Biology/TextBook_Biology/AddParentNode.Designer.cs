@@ -131,6 +131,7 @@
             this.Text = "Добвить родительский узел";
             this.ThemeName = "VisualStudio2012Light";
             this.TopMost = true;
+            this.Shown += new System.EventHandler(this.AddParentNode_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.radTextBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radButton2)).EndInit();

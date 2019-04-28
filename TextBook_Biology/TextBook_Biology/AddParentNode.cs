@@ -22,6 +22,20 @@ namespace TextBook_Biology
             this.bookForm = bookForm;
             this.flag = flag;
         }
+        //Копирование папки со всеми вложениями
+        void CopyDir(string FromDir, string ToDir)
+        {
+            Directory.CreateDirectory(ToDir);
+            foreach (string s1 in Directory.GetFiles(FromDir))
+            {
+                string s2 = ToDir + "\\" + Path.GetFileName(s1);
+                File.Copy(s1, s2);
+            }
+            foreach (string s in Directory.GetDirectories(FromDir))
+            {
+                CopyDir(s, ToDir + "\\" + Path.GetFileName(s));
+            }
+        }
 
         private void radButton2_Click(object sender, EventArgs e)
         {
@@ -60,14 +74,6 @@ namespace TextBook_Biology
 
         private void radButton1_Click(object sender, EventArgs e)
         {
-            //var selectNode = treeView.SelectedNode;
-            //if (selectNode != null)
-            //{
-            //    treeView.SelectedNode.Nodes.Add("Новый");
-            //}
-            //else
-            //{
-            //}
             if (flag)
             {
                 bookForm.treeView.Nodes.Add(radTextBox1.Text);
@@ -75,6 +81,14 @@ namespace TextBook_Biology
                 if (file.Exists)
                 {
                     file.CopyTo(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
+                    try
+                    {
+                        CopyDir(radTextBox2.Text.Substring(0, radTextBox2.Text.Length - 4) + "files", Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + openFileDialog1.SafeFileName.Substring(0, openFileDialog1.SafeFileName.Length - 4) + "files");
+                    }
+                    catch (Exception)
+                    {
+
+                    }
                 }
                 FileStream writer = new FileStream(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\tree.lst", FileMode.Create, FileAccess.Write);
                 bookForm.treeView.SaveXML(writer);
@@ -91,6 +105,14 @@ namespace TextBook_Biology
                     if (file.Exists)
                     {
                         file.CopyTo(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
+                        try
+                        {
+                            CopyDir(radTextBox2.Text.Substring(0, radTextBox2.Text.Length - 4) + "files", Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + openFileDialog1.SafeFileName.Substring(0, openFileDialog1.SafeFileName.Length - 4) + "files");
+                        }
+                        catch (Exception)
+                        {
+
+                        }
                     }
                     FileStream writer = new FileStream(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\tree.lst", FileMode.Create, FileAccess.Write);
                     bookForm.treeView.SaveXML(writer);
@@ -105,6 +127,20 @@ namespace TextBook_Biology
                 
             }
             
+        }
+
+        private void AddParentNode_Shown(object sender, EventArgs e)
+        {
+            if (flag)
+            {
+                Text = "Добвить родительский узел";
+                label1.Text = "Имя родительского узла:";
+            }
+            else
+            {
+                Text = "Добвить вложенный узел";
+                label1.Text = "Имя вложенного узла:";
+            }
         }
     }
 }
