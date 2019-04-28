@@ -21,3 +21,8 @@ D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextB
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.TextBookForm.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AddParentNode.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.RenameForm.resources
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AboutForm.resources
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.WinControls.RichTextEditor.dll
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.WinControls.RichTextEditor.xml
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AutorizationForm.resources
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.ResetPassword.resources

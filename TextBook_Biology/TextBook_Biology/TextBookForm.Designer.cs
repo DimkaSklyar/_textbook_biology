@@ -36,6 +36,7 @@
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.menuItemAdd = new Telerik.WinControls.UI.RadMenuItem();
             this.menuItemSubAdd = new Telerik.WinControls.UI.RadMenuItem();
+            this.menuItemRename = new Telerik.WinControls.UI.RadMenuItem();
             this.menuItemRemove = new Telerik.WinControls.UI.RadMenuItem();
             this.visualStudio2012LightTheme1 = new Telerik.WinControls.Themes.VisualStudio2012LightTheme();
             this.radSplitContainer1 = new Telerik.WinControls.UI.RadSplitContainer();
@@ -47,9 +48,14 @@
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
-            this.menuItemRename = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem6 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem7 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem8 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem9 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem10 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem11 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
@@ -79,6 +85,11 @@
             // 
             this.menuItemSubAdd.Name = "menuItemSubAdd";
             this.menuItemSubAdd.Text = "Добавить вложенный узел";
+            // 
+            // menuItemRename
+            // 
+            this.menuItemRename.Name = "menuItemRename";
+            this.menuItemRename.Text = "Переименовать";
             // 
             // menuItemRemove
             // 
@@ -170,6 +181,7 @@
             // webBrowser1
             // 
             this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.IsWebBrowserContextMenuEnabled = false;
             this.webBrowser1.Location = new System.Drawing.Point(0, 0);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
@@ -182,6 +194,7 @@
             this.radMenu1.Items.AddRange(new Telerik.WinControls.RadItem[] {
             this.radMenuItem1,
             this.radMenuItem3,
+            this.radMenuItem10,
             this.radMenuItem4});
             this.radMenu1.Location = new System.Drawing.Point(0, 0);
             this.radMenu1.Name = "radMenu1";
@@ -204,13 +217,13 @@
             // 
             // radMenuItem3
             // 
+            this.radMenuItem3.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem6,
+            this.radMenuItem7,
+            this.radMenuItem8,
+            this.radMenuItem9});
             this.radMenuItem3.Name = "radMenuItem3";
             this.radMenuItem3.Text = "Вид";
-            // 
-            // menuItemRename
-            // 
-            this.menuItemRename.Name = "menuItemRename";
-            this.menuItemRename.Text = "Переименовать";
             // 
             // radMenuItem4
             // 
@@ -223,6 +236,45 @@
             // 
             this.radMenuItem5.Name = "radMenuItem5";
             this.radMenuItem5.Text = "О программе";
+            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
+            // 
+            // radMenuItem6
+            // 
+            this.radMenuItem6.Name = "radMenuItem6";
+            this.radMenuItem6.Text = "Масштаб: 100%";
+            this.radMenuItem6.Click += new System.EventHandler(this.radMenuItem6_Click);
+            // 
+            // radMenuItem7
+            // 
+            this.radMenuItem7.Name = "radMenuItem7";
+            this.radMenuItem7.Text = "Масштаб: 125%";
+            this.radMenuItem7.Click += new System.EventHandler(this.radMenuItem7_Click);
+            // 
+            // radMenuItem8
+            // 
+            this.radMenuItem8.Name = "radMenuItem8";
+            this.radMenuItem8.Text = "Масштаб: 150%";
+            this.radMenuItem8.Click += new System.EventHandler(this.radMenuItem8_Click);
+            // 
+            // radMenuItem9
+            // 
+            this.radMenuItem9.Name = "radMenuItem9";
+            this.radMenuItem9.Text = "Масштаб 200%";
+            this.radMenuItem9.Click += new System.EventHandler(this.radMenuItem9_Click);
+            // 
+            // radMenuItem10
+            // 
+            this.radMenuItem10.Enabled = false;
+            this.radMenuItem10.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem11});
+            this.radMenuItem10.Name = "radMenuItem10";
+            this.radMenuItem10.Text = "Администрирование";
+            // 
+            // radMenuItem11
+            // 
+            this.radMenuItem11.Name = "radMenuItem11";
+            this.radMenuItem11.Text = "Сменить имя пользователя и пароль";
+            this.radMenuItem11.Click += new System.EventHandler(this.radMenuItem11_Click);
             // 
             // TextBookForm
             // 
@@ -241,6 +293,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TextBookForm";
             this.ThemeName = "VisualStudio2012Light";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TextBookForm_FormClosed);
             this.Shown += new System.EventHandler(this.TextBookForm_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).EndInit();
             this.radSplitContainer1.ResumeLayout(false);
@@ -275,5 +328,11 @@
         private Telerik.WinControls.UI.RadMenuItem menuItemRename;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem4;
         private Telerik.WinControls.UI.RadMenuItem radMenuItem5;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem6;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem7;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem8;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem9;
+        private Telerik.WinControls.UI.RadMenuItem radMenuItem11;
+        internal Telerik.WinControls.UI.RadMenuItem radMenuItem10;
     }
 }

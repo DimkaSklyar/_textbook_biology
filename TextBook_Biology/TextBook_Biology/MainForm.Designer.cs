@@ -36,11 +36,13 @@
             this.removeBotton = new Telerik.WinControls.UI.RadButton();
             this.settingsButton = new Telerik.WinControls.UI.RadButton();
             this.goButton = new Telerik.WinControls.UI.RadButton();
+            this.exitButton = new Telerik.WinControls.UI.RadButton();
             ((System.ComponentModel.ISupportInitialize)(this.listTextbook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.addButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.removeBotton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,6 +55,7 @@
             // 
             // addButton
             // 
+            this.addButton.Enabled = false;
             this.addButton.Location = new System.Drawing.Point(356, 12);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(126, 24);
@@ -63,6 +66,7 @@
             // 
             // removeBotton
             // 
+            this.removeBotton.Enabled = false;
             this.removeBotton.Location = new System.Drawing.Point(356, 53);
             this.removeBotton.Name = "removeBotton";
             this.removeBotton.Size = new System.Drawing.Size(126, 24);
@@ -79,6 +83,7 @@
             this.settingsButton.TabIndex = 1;
             this.settingsButton.Text = "Администрирование";
             this.settingsButton.ThemeName = "VisualStudio2012Light";
+            this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
             // goButton
             // 
@@ -90,11 +95,23 @@
             this.goButton.ThemeName = "VisualStudio2012Light";
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
             // 
+            // exitButton
+            // 
+            this.exitButton.Location = new System.Drawing.Point(356, 134);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(126, 24);
+            this.exitButton.TabIndex = 2;
+            this.exitButton.Text = "Выход";
+            this.exitButton.ThemeName = "VisualStudio2012Light";
+            this.exitButton.Visible = false;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 319);
+            this.Controls.Add(this.exitButton);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.removeBotton);
@@ -117,6 +134,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.removeBotton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.settingsButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.exitButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -126,10 +144,11 @@
 
         private Telerik.WinControls.Themes.VisualStudio2012DarkTheme visualStudio2012DarkTheme1;
         private Telerik.WinControls.Themes.VisualStudio2012LightTheme visualStudio2012LightTheme1;
-        private Telerik.WinControls.UI.RadButton addButton;
-        private Telerik.WinControls.UI.RadButton removeBotton;
         private Telerik.WinControls.UI.RadButton settingsButton;
         private Telerik.WinControls.UI.RadButton goButton;
         internal Telerik.WinControls.UI.RadListControl listTextbook;
+        internal Telerik.WinControls.UI.RadButton addButton;
+        internal Telerik.WinControls.UI.RadButton removeBotton;
+        internal Telerik.WinControls.UI.RadButton exitButton;
     }
 }

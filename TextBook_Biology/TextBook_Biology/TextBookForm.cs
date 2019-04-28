@@ -16,7 +16,10 @@ namespace TextBook_Biology
     {
         internal string nameTextbook;
         string path = Application.StartupPath;
-        public TextBookForm(string nameTextbook)
+        AboutForm aboutForm;
+        MainForm mainForm;
+        ResetPassword resetPassword;
+        public TextBookForm(string nameTextbook, MainForm mainForm)
         {
             InitializeComponent();
             menuItemAdd.Click += MenuItemAdd_Click;
@@ -24,6 +27,7 @@ namespace TextBook_Biology
             menuItemSubAdd.Click += MenuItemSubAdd_Click;
             menuItemRename.Click += MenuItemRename_Click;
             this.nameTextbook = nameTextbook;
+            this.mainForm = mainForm;
         }
 
         private void MenuItemRename_Click(object sender, EventArgs e)
@@ -107,6 +111,59 @@ namespace TextBook_Biology
         private void radMenuItem2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void radMenuItem6_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Document.Body.Style = "zoom: 100%;";
+        }
+
+        private void radMenuItem7_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Document.Body.Style = "zoom: 125%;";
+        }
+
+        private void radMenuItem8_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Document.Body.Style = "zoom: 150%;";
+        }
+
+        private void radMenuItem9_Click(object sender, EventArgs e)
+        {
+            webBrowser1.Document.Body.Style = "zoom: 200%;";
+        }
+
+        private void TextBookForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            mainForm.Visible = true;   
+        }
+
+        private void radMenuItem5_Click(object sender, EventArgs e)
+        {
+            if (aboutForm == null)
+            {
+                aboutForm = new AboutForm();
+                aboutForm.Show();
+            }
+            else if (aboutForm.IsDisposed)
+            {
+                aboutForm = new AboutForm();
+                aboutForm.Show();
+            }
+        }
+
+        private void radMenuItem11_Click(object sender, EventArgs e)
+        {
+            if (resetPassword == null)
+            {
+                resetPassword = new ResetPassword();
+                resetPassword.Show();
+            }
+            else if (resetPassword.IsDisposed)
+            {
+                resetPassword = new ResetPassword();
+                resetPassword.Show();
+            }
         }
     }
 }

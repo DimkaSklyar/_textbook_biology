@@ -15,6 +15,8 @@ namespace TextBook_Biology
         AddTextbookForm addTextbook;
         string path = Application.StartupPath;
         TextBookForm textBookForm;
+        AutorizationForm autorizationForm;
+        internal bool SingInOn = false;
         public MainForm()
         {
             InitializeComponent();
@@ -86,12 +88,14 @@ namespace TextBook_Biology
 
         private void goButton_Click(object sender, EventArgs e)
         {
+
+            //Не рабтает администрирование с первого раза!
             var item = this.listTextbook.SelectedItem;
             string nameTextbook="";
             if (textBookForm == null && item != null)
             {
                 nameTextbook = item.Text;
-                textBookForm = new TextBookForm(nameTextbook);
+                textBookForm = new TextBookForm(nameTextbook,this);
                 textBookForm.Text = this.listTextbook.SelectedItem.Text;
                 FileStream reader = new FileStream(path + "\\" + nameTextbook + "\\tree.lst", FileMode.OpenOrCreate);
                 reader.Close();
@@ -100,15 +104,41 @@ namespace TextBook_Biology
             else if (item != null && textBookForm.IsDisposed)
             {
                 nameTextbook = item.Text;
-                TextBookForm textBookForm = new TextBookForm(nameTextbook);
+                TextBookForm textBookForm = new TextBookForm(nameTextbook, this);
                 textBookForm.Text = this.listTextbook.SelectedItem.Text;
                 textBookForm.Show();
+                textBookForm.radMenuItem10.Enabled = SingInOn;
+                this.Hide();
             }
             else
             {
                 MessageBox.Show("Выберете один учебние из списка!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            
+        }
 
+        private void settingsButton_Click(object sender, EventArgs e)
+        {
+
+            if (autorizationForm == null)
+            {
+                autorizationForm = new AutorizationForm(this);
+                autorizationForm.Show();
+            }
+            else if (autorizationForm.IsDisposed)
+            {
+                AutorizationForm autorizationForm = new AutorizationForm(this);
+                autorizationForm.Show();
+            }
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            addButton.Enabled = false;
+            removeBotton.Enabled = false;
+            SingInOn = false;
+            exitButton.Visible = false;
+            autorizationForm.sigInON = false;
         }
     }
 }
