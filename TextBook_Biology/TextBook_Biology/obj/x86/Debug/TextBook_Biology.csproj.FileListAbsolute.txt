@@ -1,6 +1,3 @@
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook_Biology.exe.config
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook_Biology.exe
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook_Biology.pdb
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.WinControls.dll
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.WinControls.Themes.VisualStudio2012Light.dll
@@ -11,11 +8,8 @@ D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\Telerik.W
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.csprojAssemblyReference.cache
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.Properties.Resources.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.csproj.GenerateResource.cache
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.exe.licenses
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.csproj.CoreCompileInputs.cache
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.csproj.CopyComplete
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.exe
-D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.pdb
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.MainForm.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.AddTextbookForm.resources
 D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.TextBookForm.resources
@@ -54,3 +48,9 @@ C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextB
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.csproj.CopyComplete
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.exe
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook_Biology.pdb
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook.exe.config
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook.exe
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Debug\TextBook.pdb
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook.exe.licenses
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook.exe
+D:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Debug\TextBook.pdb
