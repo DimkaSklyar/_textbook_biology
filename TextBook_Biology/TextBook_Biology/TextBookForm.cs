@@ -78,7 +78,7 @@ namespace TextBook_Biology
 
         private void treeView_MouseDown(object sender, MouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            if (e.Button == MouseButtons.Right && mainForm.SingInOn)
             {
                 Point p = new Point(e.X, e.Y);
                 radContextMenu1.Show(treeView, p);

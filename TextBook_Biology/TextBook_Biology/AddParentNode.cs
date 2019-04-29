@@ -10,6 +10,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using Telerik.WinControls.UI;
 
+
 namespace TextBook_Biology
 {
     public partial class AddParentNode : Telerik.WinControls.UI.RadForm
@@ -77,10 +78,8 @@ namespace TextBook_Biology
             if (flag)
             {
                 bookForm.treeView.Nodes.Add(radTextBox1.Text);
-                FileInfo file = new FileInfo(radTextBox2.Text);
-                if (file.Exists)
-                {
-                    file.CopyTo(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
+                File.Copy(radTextBox2.Text, Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
+
                     try
                     {
                         CopyDir(radTextBox2.Text.Substring(0, radTextBox2.Text.Length - 4) + "files", Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + openFileDialog1.SafeFileName.Substring(0, openFileDialog1.SafeFileName.Length - 4) + "files");
@@ -89,10 +88,15 @@ namespace TextBook_Biology
                     {
 
                     }
-                }
+                    
+                    FileStream fileClose = new FileStream(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html", FileMode.Open);
+                    fileClose.Close();
+                
                 FileStream writer = new FileStream(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\tree.lst", FileMode.Create, FileAccess.Write);
                 bookForm.treeView.SaveXML(writer);
+                
                 writer.Close();
+                
                 this.Close();
             }
             else
@@ -101,19 +105,17 @@ namespace TextBook_Biology
                 if (selectNode != null)
                 {
                     bookForm.treeView.SelectedNode.Nodes.Add(radTextBox1.Text);
-                    FileInfo file = new FileInfo(radTextBox2.Text);
-                    if (file.Exists)
+                    File.Copy(radTextBox2.Text, Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
+
+                    try
                     {
-                        file.CopyTo(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + radTextBox1.Text + ".html");
-                        try
-                        {
                             CopyDir(radTextBox2.Text.Substring(0, radTextBox2.Text.Length - 4) + "files", Application.StartupPath + "\\" + bookForm.nameTextbook + "\\" + openFileDialog1.SafeFileName.Substring(0, openFileDialog1.SafeFileName.Length - 4) + "files");
                         }
                         catch (Exception)
                         {
 
                         }
-                    }
+                    
                     FileStream writer = new FileStream(Application.StartupPath + "\\" + bookForm.nameTextbook + "\\tree.lst", FileMode.Create, FileAccess.Write);
                     bookForm.treeView.SaveXML(writer);
                     writer.Close();

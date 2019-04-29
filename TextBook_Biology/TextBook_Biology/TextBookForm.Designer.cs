@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode1 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode2 = new Telerik.WinControls.UI.RadTreeNode();
-            Telerik.WinControls.UI.RadTreeNode radTreeNode3 = new Telerik.WinControls.UI.RadTreeNode();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextBookForm));
             this.radContextMenu1 = new Telerik.WinControls.UI.RadContextMenu(this.components);
             this.menuItemAdd = new Telerik.WinControls.UI.RadMenuItem();
@@ -48,14 +45,14 @@
             this.radMenuItem1 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem2 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem3 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
-            this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem6 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem7 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem8 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem9 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem10 = new Telerik.WinControls.UI.RadMenuItem();
             this.radMenuItem11 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem4 = new Telerik.WinControls.UI.RadMenuItem();
+            this.radMenuItem5 = new Telerik.WinControls.UI.RadMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.radSplitContainer1)).BeginInit();
             this.radSplitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitPanel1)).BeginInit();
@@ -137,27 +134,14 @@
             this.treeView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.treeView.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.treeView.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.treeView.ItemHeight = 40;
             this.treeView.Location = new System.Drawing.Point(0, 0);
             this.treeView.Name = "treeView";
-            radTreeNode1.ContextMenu = this.radContextMenu1;
-            radTreeNode1.Name = "Node1";
-            radTreeNode1.Text = "Node1";
-            radTreeNode2.ContextMenu = this.radContextMenu1;
-            radTreeNode2.Expanded = true;
-            radTreeNode2.Name = "Node2";
-            radTreeNode3.ContextMenu = this.radContextMenu1;
-            radTreeNode3.Name = "Node3";
-            radTreeNode3.Text = "Node3";
-            radTreeNode2.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode3});
-            radTreeNode2.Text = "Node2";
-            this.treeView.Nodes.AddRange(new Telerik.WinControls.UI.RadTreeNode[] {
-            radTreeNode1,
-            radTreeNode2});
             this.treeView.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.treeView.Size = new System.Drawing.Size(217, 584);
             this.treeView.TabIndex = 0;
             this.treeView.ThemeName = "VisualStudio2012Light";
+            this.treeView.TreeIndent = 40;
             this.treeView.SelectedNodeChanged += new Telerik.WinControls.UI.RadTreeView.RadTreeViewEventHandler(this.treeView_SelectedNodeChanged);
             this.treeView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.treeView_MouseDown);
             // 
@@ -225,19 +209,6 @@
             this.radMenuItem3.Name = "radMenuItem3";
             this.radMenuItem3.Text = "Вид";
             // 
-            // radMenuItem4
-            // 
-            this.radMenuItem4.Items.AddRange(new Telerik.WinControls.RadItem[] {
-            this.radMenuItem5});
-            this.radMenuItem4.Name = "radMenuItem4";
-            this.radMenuItem4.Text = "Сервис";
-            // 
-            // radMenuItem5
-            // 
-            this.radMenuItem5.Name = "radMenuItem5";
-            this.radMenuItem5.Text = "О программе";
-            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
-            // 
             // radMenuItem6
             // 
             this.radMenuItem6.Name = "radMenuItem6";
@@ -276,9 +247,22 @@
             this.radMenuItem11.Text = "Сменить имя пользователя и пароль";
             this.radMenuItem11.Click += new System.EventHandler(this.radMenuItem11_Click);
             // 
+            // radMenuItem4
+            // 
+            this.radMenuItem4.Items.AddRange(new Telerik.WinControls.RadItem[] {
+            this.radMenuItem5});
+            this.radMenuItem4.Name = "radMenuItem4";
+            this.radMenuItem4.Text = "Сервис";
+            // 
+            // radMenuItem5
+            // 
+            this.radMenuItem5.Name = "radMenuItem5";
+            this.radMenuItem5.Text = "О программе";
+            this.radMenuItem5.Click += new System.EventHandler(this.radMenuItem5_Click);
+            // 
             // TextBookForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1072, 607);
             this.Controls.Add(this.radSplitContainer1);

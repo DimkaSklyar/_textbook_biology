@@ -73,7 +73,7 @@
             // 
             this.radTextBox1.Location = new System.Drawing.Point(159, 12);
             this.radTextBox1.Name = "radTextBox1";
-            this.radTextBox1.Size = new System.Drawing.Size(166, 24);
+            this.radTextBox1.Size = new System.Drawing.Size(166, 35);
             this.radTextBox1.TabIndex = 2;
             this.radTextBox1.ThemeName = "VisualStudio2012Light";
             // 
@@ -90,7 +90,7 @@
             // 
             this.radTextBox2.Location = new System.Drawing.Point(159, 46);
             this.radTextBox2.Name = "radTextBox2";
-            this.radTextBox2.Size = new System.Drawing.Size(166, 24);
+            this.radTextBox2.Size = new System.Drawing.Size(166, 35);
             this.radTextBox2.TabIndex = 2;
             this.radTextBox2.ThemeName = "VisualStudio2012Light";
             // 
@@ -107,7 +107,8 @@
             // 
             this.radTextBox3.Location = new System.Drawing.Point(159, 81);
             this.radTextBox3.Name = "radTextBox3";
-            this.radTextBox3.Size = new System.Drawing.Size(166, 24);
+            this.radTextBox3.PasswordChar = '*';
+            this.radTextBox3.Size = new System.Drawing.Size(166, 35);
             this.radTextBox3.TabIndex = 2;
             this.radTextBox3.ThemeName = "VisualStudio2012Light";
             // 
@@ -124,13 +125,14 @@
             // 
             this.radTextBox4.Location = new System.Drawing.Point(159, 116);
             this.radTextBox4.Name = "radTextBox4";
-            this.radTextBox4.Size = new System.Drawing.Size(166, 24);
+            this.radTextBox4.PasswordChar = '*';
+            this.radTextBox4.Size = new System.Drawing.Size(166, 35);
             this.radTextBox4.TabIndex = 2;
             this.radTextBox4.ThemeName = "VisualStudio2012Light";
             // 
             // ResetPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 188);
             this.Controls.Add(this.radTextBox4);

@@ -20,10 +20,24 @@ namespace TextBook_Biology
         public MainForm()
         {
             InitializeComponent();
+            try
+            {
+                FileStream file = new FileStream(path + "\\listTextBook.lst", FileMode.CreateNew, FileAccess.Write);
+                StreamWriter streamWriter = new StreamWriter(file, Encoding.Default);
+                for (int i = 0; i < listTextbook.Items.Count; i++)
+                {
+                    streamWriter.WriteLine(listTextbook.Items[i].ToString());
+                }
+                streamWriter.Close();
+            }
+            catch (Exception)
+            {
+
+            }
+
         }
         void saveList()
         {
-
             FileStream file = new FileStream(path + "\\listTextBook.lst", FileMode.Create, FileAccess.Write);
             StreamWriter streamWriter = new StreamWriter(file, Encoding.Default);
             for (int i = 0; i < listTextbook.Items.Count; i++)
@@ -98,13 +112,14 @@ namespace TextBook_Biology
                 textBookForm = new TextBookForm(nameTextbook,this);
                 textBookForm.Text = this.listTextbook.SelectedItem.Text;
                 FileStream reader = new FileStream(path + "\\" + nameTextbook + "\\tree.lst", FileMode.OpenOrCreate);
+                textBookForm.radMenuItem10.Enabled = SingInOn;
                 reader.Close();
                 textBookForm.Show();
             }
             else if (item != null && textBookForm.IsDisposed)
             {
                 nameTextbook = item.Text;
-                TextBookForm textBookForm = new TextBookForm(nameTextbook, this);
+                textBookForm = new TextBookForm(nameTextbook, this);
                 textBookForm.Text = this.listTextbook.SelectedItem.Text;
                 textBookForm.Show();
                 textBookForm.radMenuItem10.Enabled = SingInOn;
