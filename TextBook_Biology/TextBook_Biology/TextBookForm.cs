@@ -19,6 +19,8 @@ namespace TextBook_Biology
         AboutForm aboutForm;
         MainForm mainForm;
         ResetPassword resetPassword;
+        string style = "zoom: 100%;";
+
         public TextBookForm(string nameTextbook, MainForm mainForm)
         {
             InitializeComponent();
@@ -28,6 +30,7 @@ namespace TextBook_Biology
             menuItemRename.Click += MenuItemRename_Click;
             this.nameTextbook = nameTextbook;
             this.mainForm = mainForm;
+            
         }
 
         private void MenuItemRename_Click(object sender, EventArgs e)
@@ -100,12 +103,20 @@ namespace TextBook_Biology
             
             reader.Close();
             treeView.SelectedNode = treeView.Nodes[0];
+            //webBrowser1.Document.Body.Style = style;
         }
 
         private void treeView_SelectedNodeChanged(object sender, RadTreeViewEventArgs e)
         {
             Uri uri = new Uri(path + "\\" + nameTextbook + "\\" + e.Node.Text + ".html");
             webBrowser1.Url = uri;
+            webBrowser1.DocumentCompleted += WebBrowser1_DocumentCompleted;
+           
+        }
+
+        private void WebBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            webBrowser1.Document.Body.Style = style;
         }
 
         private void radMenuItem2_Click(object sender, EventArgs e)
@@ -116,21 +127,25 @@ namespace TextBook_Biology
         private void radMenuItem6_Click(object sender, EventArgs e)
         {
             webBrowser1.Document.Body.Style = "zoom: 100%;";
+            style = "zoom: 100%;";
         }
 
         private void radMenuItem7_Click(object sender, EventArgs e)
         {
             webBrowser1.Document.Body.Style = "zoom: 125%;";
+            style = "zoom: 125%;";
         }
 
         private void radMenuItem8_Click(object sender, EventArgs e)
         {
             webBrowser1.Document.Body.Style = "zoom: 150%;";
+            style = "zoom: 150%;";
         }
 
         private void radMenuItem9_Click(object sender, EventArgs e)
         {
             webBrowser1.Document.Body.Style = "zoom: 200%;";
+            style = "zoom: 200%;";
         }
 
         private void TextBookForm_FormClosed(object sender, FormClosedEventArgs e)

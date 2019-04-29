@@ -39,8 +39,21 @@ namespace TextBook_Biology
                     streamWriter.WriteLine(new_password);
                     streamWriter.Close();
                     filestream.Close();
+                    DialogResult res = MessageBox.Show("Логин и пароль изменён!", "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                    if (res == DialogResult.OK)
+                    {
+                        this.Close();
+                    }
                 }
+                else
+                {
+                    DialogResult res = MessageBox.Show("Неверное имя пользователя или пароль!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Поля не должны быть пусты!", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
     }

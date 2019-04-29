@@ -101,5 +101,4 @@
     <Nodes Name="Смена природных сообществ" Text="Смена природных сообществ" Font="Microsoft Sans Serif; 8,25pt" />
     <Nodes Name="Многообразие природных сообществ" Text="Многообразие природных сообществ" Font="Microsoft Sans Serif; 8,25pt" />
   </Nodes>
-  <Nodes Name="312321" Text="312321" Font="Microsoft Sans Serif; 8,25pt" />
 </TreeView>
