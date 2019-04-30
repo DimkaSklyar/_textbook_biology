@@ -61,7 +61,7 @@
             // 
             // radButton1
             // 
-            this.radButton1.Location = new System.Drawing.Point(215, 154);
+            this.radButton1.Location = new System.Drawing.Point(215, 152);
             this.radButton1.Name = "radButton1";
             this.radButton1.Size = new System.Drawing.Size(110, 24);
             this.radButton1.TabIndex = 1;

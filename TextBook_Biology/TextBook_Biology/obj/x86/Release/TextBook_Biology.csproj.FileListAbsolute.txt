@@ -1,6 +1,3 @@
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook_Biology.exe.config
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook_Biology.exe
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook_Biology.pdb
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\Telerik.WinControls.dll
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\Telerik.WinControls.RichTextEditor.dll
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\Telerik.WinControls.Themes.VisualStudio2012Dark.dll
@@ -21,8 +18,11 @@ C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\Tex
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.ResetPassword.resources
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.TextBookForm.resources
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.csproj.GenerateResource.cache
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.exe.licenses
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.csproj.CoreCompileInputs.cache
 C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.csproj.CopyComplete
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.exe
-C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook_Biology.pdb
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook.exe.config
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook.exe
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\bin\Release\TextBook.pdb
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook.exe.licenses
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook.exe
+C:\_work\_textbook_biology\TextBook_Biology\TextBook_Biology\obj\x86\Release\TextBook.pdb

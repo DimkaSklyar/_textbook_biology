@@ -38,6 +38,7 @@ namespace TextBook_Biology
                 mainForm.removeBotton.Enabled = true;
                 mainForm.SingInOn = true;
                 mainForm.exitButton.Visible = true;
+                streamReader.Close();
                 Close();
             }
             else
