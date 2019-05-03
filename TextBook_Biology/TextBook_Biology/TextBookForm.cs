@@ -102,8 +102,15 @@ namespace TextBook_Biology
             }
             
             reader.Close();
-            treeView.SelectedNode = treeView.Nodes[0];
-            //webBrowser1.Document.Body.Style = style;
+            try
+            {
+                treeView.SelectedNode = treeView.Nodes[0];
+            }
+            catch (Exception)
+            {
+
+            }
+            
         }
 
         private void treeView_SelectedNodeChanged(object sender, RadTreeViewEventArgs e)

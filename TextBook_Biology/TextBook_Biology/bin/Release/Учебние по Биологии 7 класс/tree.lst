@@ -1,8 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<TreeView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ThemeName="VisualStudio2012Light" BackColor="239; 239; 242">
-  <Nodes Name="Введение в зоологию" Text="Введение в зоологию" Font="(отсутствует)" />
-  <Nodes Name="Простейшие" Expanded="true" Text="Простейшие" Font="(отсутствует)">
-    <Nodes Name="Корненожки, радиолярии, солнечники, споровики" Text="Корненожки, радиолярии, солнечники, споровики" Font="(отсутствует)" />
-    <Nodes Name="Жгутиконосцы, инфузории" Text="Жгутиконосцы, инфузории" Font="(отсутствует)" />
-  </Nodes>
-</TreeView>
